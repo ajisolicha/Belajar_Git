@@ -11,7 +11,6 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
-
 namespace Ui {
 class MainWindow;
 }
@@ -21,6 +20,12 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent =0);
     ~MainWindow();
+    QString d_filename;
+    QString datawaktu,datakecepatan,dataaltitude,dataroll,datalongitude,datapitch,datalatitude,datayaw;
+    int Data,Data1,Data2,Data3,Data4,Data5,Data6,Data7;
+
+    bool PengolahanData (float ko[10000][10000]);
+
 private slots:
     void updatePlayerUI(QImage img);
     void on_pushButton_clicked();
@@ -37,6 +42,22 @@ private slots:
     void on_horizontalSlider_sliderReleased();
     void on_horizontalSlider_sliderMoved(int position);
     void on_pushButton_5_clicked();
+
+    void on_checkBox_stateChanged(int arg1);
+
+    void on_checkBox_2_stateChanged(int arg1);
+
+    void on_checkBox_3_stateChanged(int arg1);
+
+    void on_checkBox_6_stateChanged(int arg1);
+
+    void on_checkBox_4_stateChanged(int arg1);
+
+    void on_checkBox_7_stateChanged(int arg1);
+
+    void on_checkBox_5_stateChanged(int arg1);
+
+    void on_checkBox_8_stateChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;

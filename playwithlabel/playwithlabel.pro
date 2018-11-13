@@ -16,7 +16,6 @@ TEMPLATE = app
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
-# Kalau di arik
 
 #INCLUDEPATH +=C:\OpenCV\opencv\build\install\include
 
@@ -29,9 +28,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #LIBS +=C:\OpenCV\opencv\build\bin\libopencv_photo343.dll
 #LIBS +=C:\OpenCV\opencv\build\bin\libopencv_video343.dll
 
-# Kalau di rahma
-
-INCLUDEPATH += C:\Users\User\Downloads\opencv\build\install\include
+INCLUDEPATH += C:\Users\User\Downloads\opencv\build\install\include  \
+               C:\Program Files (x86)\MATLAB\R2015b\extern\include   \
+               C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft
 
 LIBS +=C:\Users\User\Downloads\opencv\build\bin\libopencv_core320.dll
 LIBS +=C:\Users\User\Downloads\opencv\build\bin\libopencv_highgui320.dll
@@ -42,17 +41,6 @@ LIBS +=C:\Users\User\Downloads\opencv\build\bin\libopencv_videoio320.dll
 LIBS +=C:\Users\User\Downloads\opencv\build\bin\libopencv_photo320.dll
 LIBS +=C:\Users\User\Downloads\opencv\build\bin\libopencv_video320.dll
 
-#INCLUDEPATH += C:\Program Files (x86)\MATLAB\R2015b\extern\include
-
-#LIBS += C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libeng.lib
-#LIBS += C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libma.lib
-#LIBS += C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libmex.lib
-#LIBS += C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libmwblas.lib
-#LIBS += C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libmqblascompact32.lib
-#LIBS += C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libmxlapack.lib
-#LIBS += C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libmwmathutil.lib
-#LIBS += C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libmx.lib
-#LIBS += C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libut.lib
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
@@ -66,7 +54,15 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    player.h
+    player.h \
+    engine.h  \
+    matrix.h
+
+DISTFILES += \
+    codeMatlab.m
+
+LIBS += "C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libeng.lib"  \
+         "C:\Program Files (x86)\MATLAB\R2015b\extern\lib\win32\microsoft\libmx.lib"
 
 FORMS += \
         mainwindow.ui

@@ -98,7 +98,7 @@ border: 1px solid;
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>10</y>
       <width>671</width>
       <height>141</height>
@@ -333,7 +333,7 @@ border: 1px solid;
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>110</x>
       <y>460</y>
       <width>41</width>
       <height>16</height>
